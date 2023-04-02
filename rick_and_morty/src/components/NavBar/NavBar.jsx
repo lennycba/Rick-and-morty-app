@@ -5,7 +5,7 @@ import ROUTES from '../../helpers/routes.helpers'
 
 
 
-export default function NavBar({onSearch,randomChar}){
+export default function NavBar({onSearch,randomChar,logOut}){
 
     return(
     <div className={style.contenedorNavBar}>
@@ -14,6 +14,7 @@ export default function NavBar({onSearch,randomChar}){
         <div className={style.links}>
                 <NavLink className={style.boton} to={ROUTES.ABOUT}><span>About</span></NavLink>
                 <NavLink className={style.boton} to={ROUTES.HOME}><span>Home</span></NavLink>
+                <button className={style.boton} onClick={logOut} ></button>
         </div>
     </div>
     )
