@@ -1,0 +1,101 @@
+
+.divContenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 25%;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/*----------------------------INPUT---------------------------------*/
+.contenedorInput{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-right: 1px;
+}
+
+.input{
+    height: 35px;
+    background-color:rgba(70, 195, 17, 0.6);
+    border: 3px solid rgb(5, 64, 8);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.input:focus{
+    background-color: rgb(13, 217, 17);
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/*----------------------------BOTON agregar---------------------------------*/
+
+.contenedorBoton{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-right: 1px;
+
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    font-family:monospace;
+    font-weight:bolder;
+    font-size: 25px;
+    height: 3vh;
+    background-color:rgba(7, 114, 68, 0.715);
+    border: 2px solid rgb(16, 179, 68);
+    box-shadow: 3px 3px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.boton:hover{
+    background-color: rgb(13, 217, 17);
+    
+}
+
+.boton:active{
+    background-color: rgb(4, 59, 12);
+}
+
+/*----------------------------BOTON random---------------------------------*/
+
+
+.contenedorBotonRandom{
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.botonRandom{
+    display: flex;
+    align-items: center;
+    font-family:monospace;
+    font-weight:bolder;
+    font-size: 25px;
+    height: 3vh;
+    background-color:rgba(7, 114, 68, 0.715);
+    border: 2px solid rgb(16, 179, 68);
+    box-shadow: 3px 3px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.botonRandom:hover{
+    background-color: rgb(13, 217, 17);
+}
+
+.botonRandom:active{
+    background-color: rgb(4, 59, 12);
+}

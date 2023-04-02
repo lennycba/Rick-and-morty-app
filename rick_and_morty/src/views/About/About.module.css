@@ -1,0 +1,49 @@
+
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 80vh;
+    margin: 20px auto auto;
+    justify-content:space-around;
+    align-items:center;
+    color: rgb(13, 14, 13);
+    background-color: rgba(118, 237, 175, 0.243);
+    border-radius: 60px;
+    border: 2px solid rgb(6, 52, 28);
+    box-shadow: 1px 1px 20px 5px rgba(255, 255, 255, 0.4);
+    padding: 15px;
+}
+
+.nombre{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.contenedorImagen{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagen{
+    width: 70%;
+    margin: auto auto;
+    border-radius: 30px;
+}
+
+h1{
+    font-size: 35px;
+    font-family: monospace;
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+    text-align: center;
+    font-family: monospace;
+    font-weight: 900;
+}

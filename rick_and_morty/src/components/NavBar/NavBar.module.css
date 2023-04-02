@@ -1,0 +1,60 @@
+
+.contenedorNavBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    width: 97%;
+    margin-left: 25px;
+    margin-top: 10px;
+    background-color: rgba(10, 107, 60, 0.887);
+    border-radius: 25px;
+    border: 2px solid rgba(36, 234, 125, 0.766);
+    box-shadow: 1px 1px 20px 5px rgba(255, 255, 255, 0.4);
+
+
+}
+
+.divLogo{
+    margin-right: 50px;
+    display: flex;
+    width: 600px;
+    height: 60px;
+}
+
+.links{
+    display: flex;
+    height: 45px;
+    justify-content:space-around;
+    align-items:center;
+    width:12%;
+    margin-right: 0px;
+    margin-left: 300px;
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    font-family:monospace;
+    font-weight:bolder;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    height: 1px;
+    background-color:rgba(7, 114, 68, 0.715);
+    border: 2px solid rgb(16, 179, 68);
+    box-shadow: 3px 3px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.boton:hover{
+    background-color: rgb(13, 217, 17);
+    
+}
+
+.boton:active{
+    background-color: rgb(4, 59, 12);
+}
