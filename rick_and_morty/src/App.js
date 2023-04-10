@@ -9,6 +9,7 @@ import About from "./views/About/About";
 import Detail from "./views/Detail/Detail";
 import ROUTES from "./helpers/routes.helpers";
 import Form from "./components/Form/Form";
+import Favorites from "./views/Favorites/Favorites";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -94,6 +95,8 @@ const logOut = () =>{
         <Route path={ROUTES.ABOUT} element={<About />} />
 
         <Route path={`${ROUTES.DETAIL}/:detailId`} element={<Detail />} />
+
+        <Route path={ROUTES.FAVORITES} element={<Favorites onClose={onClose} />} />
       </Routes>
     </div>
   );

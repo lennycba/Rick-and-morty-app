@@ -7,15 +7,15 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+
 }
 
 .formulario{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 350px;
+    width: 450px;
     height: 500px;
     background-color: rgba(17, 196, 89, 0.684);
     border-radius: 25px;
@@ -23,22 +23,30 @@
 
 .campos{
     display: flex;
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-family: monospace;
     font-size: 20px;
+    padding: 20px 0;
 }
 
 .campos input{
-    width: 80%;
-    height: 15%;
+    width: 250px;
+    height: 30px;
+    min-height: 30px;
     border-radius: 5px;
     outline: none;
     border: none;
-    margin-bottom: 10px;
+    padding: 0 10px;
+
+
+}
+
+.campos label{
+    margin: 30px auto 0;
 }
 
 .campos input:focus{
@@ -52,12 +60,12 @@
 }
 
 
-.campos p{
+/* .campos p{
     width: 50%;
     margin: auto 100px;
     left: 250px;
     bottom: 27px;
-}
+} */
 
 
 .warning {
@@ -67,10 +75,14 @@
   }
   
   .danger {
-    font-size: 10px;
+    width: 300px;
+    font-size: 15px;
     color: rgb(0, 0, 0);
-    margin-left: 10em;
+    margin: 0;
+    padding: 0;
   }
+
+
   
 
   .boton{
