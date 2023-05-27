@@ -3,7 +3,7 @@ import Cards from "./components/Cards/Cards";
 import style from "./App.module.css";
 import NavBar from "./components/NavBar/NavBar";
 import { useState, useEffect } from "react";
-import { IdRepeat, NoId } from "./components/Alerts/IdRepeat";
+import { IdRepeat, NoId,NoUser } from "./components/Alerts/IdRepeat";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import About from "./views/About/About";
 import Detail from "./views/Detail/Detail";
@@ -58,16 +58,20 @@ function App() {
   /* const EMAIL = "lenny@gmail.com";
   const PASSWORD = "Alenny123"; */
 
-  function login(userData) {
+  async function login (userData) {
     const { email, password } = userData;
     console.log('front',userData);
     const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-       const { access } = data;
-       console.log('data',data)
-       setAccess(data);
-       access && navigate(ROUTES.HOME);
-    });
+    try {
+      await axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         console.log('data',data)
+         setAccess(data);
+         access && navigate(ROUTES.HOME);
+      });
+    } catch (error) {
+      NoUser();
+    }
  }
 
 //--------------------------------------------------------------------------------------- LOGIN VIEJO

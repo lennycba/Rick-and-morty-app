@@ -34,11 +34,13 @@ const Favorites = ({myFavorites}) =>{
           <option value="unknown">unknown</option>
         </select>
         </div>
-       {myFavorites.map(({id,name,species,gender,image})=>{
+       {myFavorites.map(({id,name,origin,status,species,gender,image})=>{
           return (<Card 
           id={id}
           key={id}
           name={name}
+          origin={origin}
+          status={status}
           species={species}
           gender={gender}
           image={image}

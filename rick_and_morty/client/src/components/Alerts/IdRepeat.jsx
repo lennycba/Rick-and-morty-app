@@ -28,4 +28,17 @@ export const NoId = () =>{
       })
 }
 
+export const NoUser = () =>{
+  Swal.fire({
+      title: 'Usuario no encontrado',
+      imageUrl: 'https://i.ytimg.com/vi/0fAbLH_gFag/maxresdefault.jpg',
+      imageWidth: 600,
+      imageHeight: 300,
+      background:'rgb(160, 237, 215)',
+      color: 'black',
+      allowOutsideClick:false,
+      confirmButtonColor: 'rgb(13, 217, 17)'
+    })
+}
+
   
