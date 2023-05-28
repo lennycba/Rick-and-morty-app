@@ -10,5 +10,9 @@ export default function Validation (inputs){
     if(!inputs.password) {errors.password='este campo es obligatorio'}
     if (!regPass.test(inputs.password)) {errors.password='debe tener entre 6 y 10 caracteres, al menos 1 numero y al menos una mayúscula'};
 
+    if(!inputs.passwordValidate) {errors.passwordValidate='este campo es obligatorio'}
+    if (!regPass.test(inputs.passwordValidate)) {errors.passwordValidate='debe tener entre 6 y 10 caracteres, al menos 1 numero y al menos una mayúscula'};
+    if(inputs.passwordValidate !== inputs.password) {errors.passwordValidate='las contraseñas deben coincidir'};
+    
     return errors;
 }

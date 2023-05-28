@@ -8,6 +8,7 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import About from "./views/About/About";
 import Detail from "./views/Detail/Detail";
 import ROUTES from "./helpers/routes.helpers";
+import Register from "./components/Form/Register";
 import Form from "./components/Form/Form";
 import Favorites from "./views/Favorites/Favorites";
 import axios from 'axios';
@@ -55,17 +56,14 @@ function App() {
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  /* const EMAIL = "lenny@gmail.com";
-  const PASSWORD = "Alenny123"; */
+
 
   async function login (userData) {
     const { email, password } = userData;
-    console.log('front',userData);
     const URL = 'http://localhost:3001/rickandmorty/login/';
     try {
       await axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
          const { access } = data;
-         console.log('data',data)
          setAccess(data);
          access && navigate(ROUTES.HOME);
       });
@@ -74,13 +72,23 @@ function App() {
     }
  }
 
-//--------------------------------------------------------------------------------------- LOGIN VIEJO
-  /* function login(userData) {
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-      setAccess(true);
-      navigate(ROUTES.HOME);
+ const register = async (newUserData) => {
+    const {email,password} = newUserData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    try {
+      const {data} = await axios.post(URL,{email,password})
+      if(data.message === 'este email ya existe') window.alert('usuario ya existente')
+      if(data.message === 'usuario creado correctamente') {
+        window.alert('registro existoso')
+        navigate(ROUTES.LOGIN);
     }
-  } */
+
+    } catch (error) {
+      throw Error(error.message);
+    }
+
+ }
+
 //---------------------------------------------------------------------------------------
 
 const logOut = () =>{
@@ -104,6 +112,8 @@ const logOut = () =>{
 
       <Routes>
         <Route exact path={ROUTES.LOGIN} element={<Form login={login} />} />
+
+        <Route exact path={ROUTES.REGISTER} element={<Register register={register} />} />
 
         <Route
           path={ROUTES.HOME}
